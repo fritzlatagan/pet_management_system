@@ -97,7 +97,7 @@ public class PetModule {
 		}
 	}
 
-	public static int _readLastRecord(String SQL, String column) {
+	public static int _readLastRecord(String SQL, int column) {
 		int value = 0;
 		try {
 			dbConn = DriverManager.getConnection(strConn, username, password);
@@ -113,7 +113,7 @@ public class PetModule {
 		return value;
 	}
 
-	public static String _readLastRecordString(String SQL, String column) {
+	public static String _readLastRecordString(String SQL, int column) {
 		String value = "";
 		try {
 			dbConn = DriverManager.getConnection(strConn, username, password);
@@ -129,7 +129,7 @@ public class PetModule {
 		return value;
 	}
 
-	public static boolean _checkDuplicate(String SQL, String column, String value) {
+	public static boolean _checkDuplicate(String SQL, int column, String value) {
 		boolean dup = false;
 		try {
 			dbConn = DriverManager.getConnection(strConn, username, password);
@@ -150,7 +150,7 @@ public class PetModule {
 		return dup;
 	}
 
-	public static boolean _isValidAccount(String SQL, String columnUN, String columnPass, String username,
+	public static boolean _isValidAccount(String SQL, int columnUN, int columnPass, String username,
 			String pass) {
 		boolean valid = false;
 		try {
